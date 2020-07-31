@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+:root {
+  --leo-orange-light: #f58249;
+  --leo-orange-dark: #fd5c3c;
+  --background: linear-gradient(90deg,#f58249,#fd5c3c);
+  --boxShadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  background: var(--background);
+  padding: 30px;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-list {
+  background: #e8e8e8;
+  border-radius: 4px;
+  padding: 15px;
+  max-width: 800px;
+}
+
+.todo {
+  background: #fff;
+  box-shadow: var(--boxShadow);
+  padding: 15px;
+  font-size: 1em;
+  margin-bottom: 6px;
+  border-radius: 3px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.action {
+  padding: 0.35rem;
+  font-size: 1.1rem;
+  margin-left: 0.25rem;
+}
+h2 {
+  margin-top: 3rem;
+}
+
+form {
+  display: flex;
+}
+
+form div {
+  margin-right: 10px;
+}
+label {
+  color: #555555;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 0 4px 2px;
+}
+.input {
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  height: 2.5rem;
+  padding: 1rem;
+  max-width: 100%;
+}
+
+.submit {
+  align-self: flex-end;
+  border: 2px solid var(--leo-orange-light);
+  border-radius: 5px;
+  font-size: 1.05em;
+  font-weight: bold;
+  height: 2.5rem;
+  width: 100px;
+}
+
+.submit:hover {
+  background-color: var(--leo-orange-light);
+}
+.submit:active {
+  background-color: var(--leo-orange-dark);
+  border-color: var(--leo-orange-dark);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit:focus:not(:active) {
+  background-color: white;
 }
