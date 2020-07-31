@@ -61,7 +61,7 @@ const TodoForm = ({ addTodo }) => {
           />
         </div>
         <div>
-          <label htmlFor="datetime">Home team name:</label>
+          <label htmlFor="datetime">Event Date:</label>
           <input
             type="datetime-local"
             className="input"
